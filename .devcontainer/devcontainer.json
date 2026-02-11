@@ -1,12 +1,20 @@
 {
-  "image": "mcr.microsoft.com/devcontainers/universal:2",
+  "name": "Feature Test Container",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu-22.04",
+
   "features": {
-    "ghcr.io/devcontainers/features/aws-cli:1": {},
-    "ghcr.io/rails/devcontainer/features/mysql-client:1": {},
-    "ghcr.io/devcontainers-extra/features/redis-homebrew:1": {},
-    "ghcr.io/devcontainers/features/go:1": {
-      "version":"latest"
+    "ghcr.io/devcontainers/features/node:1": {
+      "version": "20"
     },
-    "ghcr.io/devcontainers/features/nix:1": {}
-  }
+    "ghcr.io/devcontainers/features/github-cli:1": {},
+    "ghcr.io/devcontainers/features/common-utils:2": {
+      "installZsh": true,
+      "configureZshAsDefaultShell": true,
+      "installOhMyZsh": false,
+      "upgradePackages": false
+    },
+    "ghcr.io/devcontainers/features/starship:1": {}
+  },
+  "postCreateCommand": "npm install -g cowsay",
+  "remoteUser": "vscode"
 }
