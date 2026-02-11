@@ -12,8 +12,7 @@
       "configureZshAsDefaultShell": true,
       "installOhMyZsh": false,
       "upgradePackages": false
-    },
-    "ghcr.io/devcontainers/features/starship:1": {}
+    }
   },
   "postCreateCommand": "npm install -g cowsay",
   "remoteUser": "vscode"
